@@ -1,0 +1,38 @@
+data_depiii = read.csv("C:/Users/DHEVY SYAHRILIA F P/Downloads/PrakStatis.csv", sep = ",")
+View(data_depiii)
+
+depiii <- data_depiii[data_depiii$TinggiBadan == 182,]
+View (depiii)
+
+data_depiii$TinggiBadan <- ifelse(data_depiii$TinggiBadan > 160, c("Tinggi"), c("Pendek"))
+View(depiii)
+
+data_depiii$Jurusan <- c("Infor20")
+data_depiii$Fakultas <- c("FTI")
+View (data_depiii)
+
+data_depiii$Fakultas <- NULL
+View(data_depiii)
+
+
+
+data_depiii.kolom1dan2 <- data_depiii[,1:2]
+View(data_depiii.kolom1dan2)
+data_depiii.kolom3dan4 <- data_depiii[,3:4]
+View(data_depiii.kolom3dan4)
+data_depiii.kolom1sd4 <- cbind(data_depiii.kolom1dan2, data_depiii.kolom3dan4)
+View(data_depiii.kolom1sd4)
+
+
+data_depiii.baris1sd5 <- data_depiii[1:5,]
+View(data_depiii.baris1sd5)
+data_depiii.baris25sd30 <- data_depiii[25:30,]
+View(data_depiii.baris25sd30)
+data_depiii.baris1sd5dan25sd30 <- rbind(data_depiii.baris1sd5, data_depiii.baris25sd30)
+View(data_depiii.baris1sd5dan25sd30)
+
+
+data_depiii.sort <- data_depiii[order(data_depiii$WaktuPerjalanan),] 
+View(data_depiii.sort)
+
+
