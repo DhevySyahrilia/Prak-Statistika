@@ -1,0 +1,7 @@
+depiii = read.delim("clipboard")
+View(depiii)
+t.test(depiii$Volume, conf.level = 0.95)
+
+depiii = read.delim("clipboard")
+View(depiii)
+t.test(depiii$Volume, conf.level = 0.5)
