@@ -1,0 +1,11 @@
+prak5=read.delim("clipboard")
+View(prak5)
+str(prak5)
+mean(prak5$Volume)
+t.test(prak5$Volume, mu=10)
+
+depiii= read.delim("clipboard")
+View(depiii)
+str(depiii)
+mean(depiii$Pendapatan)
+t.test(depiii$Pendapatan, mu=14500)
