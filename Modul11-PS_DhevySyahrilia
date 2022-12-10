@@ -1,0 +1,18 @@
+#lat1
+df_depiii = read.delim("clipboard")
+View(df_depiii)
+head(df_depiii)
+
+model <- aov(method..y.~method..x., data=df_depiii)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+#lat2
+df_depiii=PlantGrowth
+View(df_depiii)
+model <- aov(weight~group, data=df_depiii)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
